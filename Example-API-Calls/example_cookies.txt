@@ -1,0 +1,25 @@
+Cookies:
+    
+    {
+        "_ga": "GA1.2.1636203845.1641935687"
+    } 
+    
+    
+    {
+        " _shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": "_5683892e3f11ea5ea384c15b4e7d4c8b"
+    } 
+    
+    
+    {
+        " _gid": "GA1.2.1568517616.1643729843"
+    } 
+    
+    
+    {
+        " connect.sid": "s%3A2eaJWbKf69x_XBQHMwcMDFZgIXlHFYHs.hngO4TfZKPnRopYUTUe4%2BAkOuK00GvYR39MRCRtbrTE"
+    } 
+    
+    
+    {
+        " _gat": "1"
+    } 

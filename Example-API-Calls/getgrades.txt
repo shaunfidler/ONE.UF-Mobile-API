@@ -1,0 +1,68 @@
+-----------------------------------------------------------------------------
+Request URL: 
+
+    {
+        "https://one.uf.edu/api/transcript/getgrades"
+    }
+
+-----------------------------------------------------------------------------
+Response: 
+
+    {
+        "terms": [
+        {
+            "termCode": "2221",
+            "termDesc": "Spring 2022",
+            "currentTerm": true,
+            "holdFlag": false,
+            "cumGpa": "4.00",
+            "termGpa": "0.00",
+            "comments": " ",
+            "classes": [
+            {
+                "course": "CIS4914",
+                "grade": "--",
+                "title": "Senior Project"
+            },
+            {
+                "course": "CIS4930",
+                "grade": "--",
+                "title": "Mobile Computing"
+            }
+            ],
+            "transcriptTextAfter": []
+        },
+        {
+            "termCode": "2218",
+            "termDesc": "Fall 2021",
+            "currentTerm": false,
+            "holdFlag": false,
+            "cumGpa": "4.00",
+            "termGpa": "4.00",
+            "comments": " ",
+            "classes": [
+            {
+                "course": "CGS3065",
+                "grade": "A",
+                "title": "Legal and Social Issues in Computing"
+            },
+            {
+                "course": "CIS4930",
+                "grade": "A",
+                "title": "SW Testing Continuous Delivery"
+            },
+            {
+                "course": "VEC2100",
+                "grade": "A",
+                "title": "World Herbs and Vegetables"
+            },
+            {
+                "course": "WIS2552",
+                "grade": "A",
+                "title": "Biodiversity Conservation: Global Perspectives"
+            }
+            ],
+            "transcriptTextAfter": []
+        }
+        ]
+    }

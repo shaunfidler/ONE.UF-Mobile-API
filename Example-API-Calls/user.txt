@@ -1,0 +1,18 @@
+-----------------------------------------------------------------------------
+Request URL: 
+
+    {
+        "https://one.uf.edu/api/uf/user"
+    }
+
+-----------------------------------------------------------------------------
+Response: 
+        
+    {
+        "name": "Shaun Middlename Fidler",
+        "legalName": "Fidler,Shaun Middlename",
+        "ufid": "12345678",
+        "apps": "[]",
+        "email": "username@ufl.edu",
+        "switchUser": "false"
+    }
