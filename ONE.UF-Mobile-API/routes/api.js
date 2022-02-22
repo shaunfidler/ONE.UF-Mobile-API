@@ -19,7 +19,7 @@ router.get('/uf/user', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     if(users.length != 0) 
     {
-      res.send(users[0].res_users)
+      res.send(users[0].res_user)
     }else
     {
       res.send({"error": "User not found."})
