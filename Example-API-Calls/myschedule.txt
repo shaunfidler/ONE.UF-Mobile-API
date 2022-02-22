@@ -1,0 +1,135 @@
+-----------------------------------------------------------------------------
+Request URL: 
+
+    {
+        "https://one.uf.edu/api/myschedule/2221"
+    }
+
+-----------------------------------------------------------------------------
+Response: 
+        
+    {
+        "credits": 6,
+        "sections": [
+        {
+            "classNumber": 11050,
+            "courseId": "010871",
+            "number": "0711",
+            "display": "0711",
+            "code": "CIS4914",
+            "name": "Senior Project",
+            "termInd": "",
+            "note": [],
+            "genEd": [],
+            "sectWeb": "PC",
+            "rotateTitle": "",
+            "deptCode": "19140000",
+            "deptName": "ENG(EG)-Comp/Info Sci & Eng",
+            "finalExam": "",
+            "grWriting": "N",
+            "courseFee": 0,
+            "EEP": "Y",
+            "instructors": [
+            "Mark Schmalz"
+            ],
+            "meetTimes": [
+            {
+                "meetNo": 1,
+                "meetDays": [],
+                "meetTimeBegin": "",
+                "meetTimeEnd": "",
+                "meetPeriodBegin": "",
+                "meetPeriodEnd": "",
+                "meetBuilding": "",
+                "meetBldgCode": "",
+                "meetRoom": ""
+            }
+            ],
+            "LMS": "",
+            "droppable": "N",
+            "begin_date": "2022-01-05",
+            "end_date": "2022-04-20",
+            "startDate": "01/05/2022",
+            "endDate": "04/20/2022",
+            "credits": 3,
+            "remark": "",
+            "acadCareer": "UGRD",
+            "acadProg": "UGENG",
+            "pastDeadline": true,
+            "enrollmentStatus": "E",
+            "enrollmentStatusDescription": "Enrolled",
+            "gradingBasis": "GRD",
+            "gradingBasisDescription": "Letter Grade",
+            "waitPosition": 0,
+            "enrollFromWait": "N"
+        },
+        {
+            "classNumber": 27778,
+            "courseId": "016253",
+            "number": "109A",
+            "display": "109A",
+            "code": "CIS4930",
+            "name": "Special Topics in CISE: Mobile Computing",
+            "termInd": "",
+            "note": [],
+            "genEd": [],
+            "sectWeb": "PC",
+            "rotateTitle": "",
+            "deptCode": "19140000",
+            "deptName": "ENG(EG)-Comp/Info Sci & Eng",
+            "finalExam": "4/25/2022 @ 10:00 AM - 12:00 PM",
+            "grWriting": "N",
+            "courseFee": 0,
+            "EEP": "Y",
+            "instructors": [
+            "Abdelsalam Helal"
+            ],
+            "meetTimes": [
+            {
+                "meetNo": 1,
+                "meetDays": [
+                "T"
+                ],
+                "meetTimeBegin": "8:30 AM",
+                "meetTimeEnd": "10:25 AM",
+                "meetPeriodBegin": "2",
+                "meetPeriodEnd": "3",
+                "meetBuilding": "LIT",
+                "meetBldgCode": "0655",
+                "meetRoom": "0121"
+            },
+            {
+                "meetNo": 2,
+                "meetDays": [
+                "R"
+                ],
+                "meetTimeBegin": "9:35 AM",
+                "meetTimeEnd": "10:25 AM",
+                "meetPeriodBegin": "3",
+                "meetPeriodEnd": "3",
+                "meetBuilding": "MAT",
+                "meetBldgCode": "0406",
+                "meetRoom": "0018"
+            }
+            ],
+            "LMS": "",
+            "droppable": "N",
+            "begin_date": "2022-01-05",
+            "end_date": "2022-04-20",
+            "startDate": "01/05/2022",
+            "endDate": "04/20/2022",
+            "credits": 3,
+            "remark": "",
+            "acadCareer": "UGRD",
+            "acadProg": "UGENG",
+            "pastDeadline": true,
+            "enrollmentStatus": "E",
+            "enrollmentStatusDescription": "Enrolled",
+            "gradingBasis": "GRD",
+            "gradingBasisDescription": "Letter Grade",
+            "waitPosition": 0,
+            "enrollFromWait": "N"
+        }
+        ],
+        "waitListSections": []
+    }
