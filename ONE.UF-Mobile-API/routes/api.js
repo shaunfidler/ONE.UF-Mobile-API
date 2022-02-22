@@ -9,23 +9,27 @@ var getUser = async() => {
 }
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('ONE.UF Mocked API');
-  user = 
-  {
-    "_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": "TEST_USER",
-    "res_users": "TEST_RES"
-  }
-  userModel.create(user);
+router.get('/users', function(req, res, next) {
+  res.setHeader('Content-Type', 'application/json');
+  userModel.find()
+  .then((users) => {
+    res.send(users);
+  });
 });
 
 /* GET user. */
 router.get('/uf/user', function(req, res, next) {
-  user_id = "" //req.cookies["_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f"]
-  userModel.find()
-  .then((user) => {
-    console.log(user)
-    res.send(user)
+  shibsession = req.cookies["_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f"]
+  userModel.find({ "_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": shibsession })
+  .then((users) => {
+    res.setHeader('Content-Type', 'application/json');
+    if(users.length != 0) 
+    {
+      res.send(users[0].res_users)
+    }else
+    {
+      res.send({"error": "User not found"})
+    }    
   })
 });
 
