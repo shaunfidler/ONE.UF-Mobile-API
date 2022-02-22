@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  "res_users": {
+  "res_user": {
     type: String,
     required: true,
   }
