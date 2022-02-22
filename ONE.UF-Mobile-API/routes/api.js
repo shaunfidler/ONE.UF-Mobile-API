@@ -38,7 +38,7 @@ router.get('/uf/user', function(req, res, next) {
       res.send(users[0].res_user)
     }else
     {
-      res.send({"error": "User not found"})
+      res.send({"error": "User not found."})
     }    
   })
 });
