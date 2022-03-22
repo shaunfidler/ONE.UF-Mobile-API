@@ -19,7 +19,12 @@ router.get('/uf/user', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     if(users.length != 0) 
     {
-      res.send(users[0].res_user)
+      if(!users[0].res_user == undefined)
+      {
+        res.send(users[0].res_user)
+      }else{
+        res.send({"error": "User data not found."})
+      }
     }else
     {
       res.send({"error": "User not found."})
@@ -35,7 +40,35 @@ router.get('/transcript/getgrades', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     if(users.length != 0) 
     {
-      res.send(users[0].res_getgrades)
+      if(!users[0].res_getgrades == undefined)
+      {
+        res.send(users[0].res_getgrades)
+      }else{
+        res.send({"error": "Grades data not found."})
+      }
+      
+    }else
+    {
+      res.send({"error": "User not found."})
+    }    
+  })
+});
+
+/* GET unofficial transcript. */
+router.get('/transcript/getunofficaltranscript', function(req, res, next) {
+  shibsession = req.cookies["_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f"]
+  userModel.find({ "_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": shibsession })
+  .then((users) => {
+    res.setHeader('Content-Type', 'application/json');
+    if(users.length != 0) 
+    {
+      if(!users[0].res_getunofficialtranscript == undefined)
+      {
+        res.send(users[0].res_getunofficialtranscript)
+      }else{
+        res.send({"error": "Unofficial Transcript data not found."})
+      }
+      
     }else
     {
       res.send({"error": "User not found."})
