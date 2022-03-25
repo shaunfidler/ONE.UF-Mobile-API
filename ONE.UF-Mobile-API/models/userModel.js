@@ -8,6 +8,12 @@ const userSchema = new mongoose.Schema({
   "res_user": {
     type: String,
     required: true,
+  },
+  "res_getunofficialtranscript": {
+    type: String
+  },
+  "res_getgrades": {
+    type: String
   }
 });
 
