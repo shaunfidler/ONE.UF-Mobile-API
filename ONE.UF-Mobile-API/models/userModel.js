@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
     type: String
   },
   "res_getaccountbalance": {
-    type: int
+    type: Number
   }
 });
 
