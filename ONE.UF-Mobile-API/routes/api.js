@@ -87,11 +87,11 @@ router.get('/campusfinances/getaccountactivities', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     if(users.length != 0) 
     {
-      if(!(users[0].res_getaccountactivites == undefined))
+      if(!(users[0].res_getaccountactivities == undefined))
       {
-        res.send(users[0].res_getaccountactivites)
+        res.send(users[0].res_getaccountactivities)
       }else{
-        res.send({"error": "User activity data not found."})
+        res.send({"error": "User activities data not found."})
       }
     }else
     {
