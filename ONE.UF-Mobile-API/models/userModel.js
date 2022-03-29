@@ -14,6 +14,21 @@ const userSchema = new mongoose.Schema({
   },
   "res_getgrades": {
     type: String
+  },
+  "res_getaccountactivites": {
+    type: String
+  },
+  "res_chargesdue": {
+    type: String
+  },
+  "res_getpaymenthistory": {
+    type: String
+  },
+  "res_getpaymentlink": {
+    type: String
+  },
+  "res_getaccountbalance": {
+    type: int
   }
 });
 
