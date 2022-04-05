@@ -29,6 +29,9 @@ const userSchema = new mongoose.Schema({
   },
   "res_getaccountbalance": {
     type: Number
+  },
+  "res_myschedule_2221": {
+    type: String
   }
 });
 

@@ -191,4 +191,29 @@ router.get('/campusfinances/getaccountbalance', function(req, res, next) {
   })
 });
 
+/* GET current schedule - Spring 2022. */
+router.get('/myschedule/2221', function(req, res, next) {
+    shibsession = req.cookies["_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f"]
+    userModel.find({ "_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": shibsession })
+    .then((users) => {
+      res.setHeader('Content-Type', 'application/json');
+      if(users.length != 0) 
+      {
+        if(!(users[0].res_myschedule_2221 == undefined))
+        {
+          res.send(users[0].res_myschedule_2221);
+        }else{
+          res.send({"error": "Spring 2022 Schedule data not found."});
+        }
+      
+    }else
+    {
+      res.send({"error": "User not found."})
+    }    
+  })
+  .catch((error) => {
+    res.send({"error": error, "source": "mock"})
+  })
+});
+
 module.exports = router;
