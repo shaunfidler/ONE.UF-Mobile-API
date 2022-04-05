@@ -87,11 +87,11 @@ router.get('/campusfinances/getaccountactivities', function(req, res, next) {
     res.setHeader('Content-Type', 'application/json');
     if(users.length != 0) 
     {
-      if(!(users[0].res_getaccountactivites == undefined))
+      if(!(users[0].res_getaccountactivities == undefined))
       {
-        res.send(users[0].res_getaccountactivites)
+        res.send(users[0].res_getaccountactivities)
       }else{
-        res.send({"error": "User activity data not found."})
+        res.send({"error": "User activities data not found."})
       }
     }else
     {
@@ -205,7 +205,54 @@ router.get('/myschedule/2221', function(req, res, next) {
         }else{
           res.send({"error": "Spring 2022 Schedule data not found."});
         }
+      }else
+      {
+        res.send({"error": "User not found."})
+      }    
+  })
+  .catch((error) => {
+    res.send({"error": error, "source": "mock"})
+  })
+});
       
+/* GET holds. */
+router.get('/actionitems/getholds', function(req, res, next) {
+  shibsession = req.cookies["_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f"]
+  userModel.find({ "_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": shibsession })
+  .then((users) => {
+    res.setHeader('Content-Type', 'application/json');
+    if(users.length != 0) 
+    {
+      if(!(users[0].res_getholds == undefined))
+      {
+        res.send(users[0].res_getholds)
+      }else{
+        res.send({"error": "Hold data not found."})
+      }
+    }else
+    {
+      res.send({"error": "User not found."})
+    }    
+  })
+  .catch((error) => {
+    res.send({"error": error, "source": "mock"})
+  })
+});
+
+/* GET todos. */
+router.get('/actionitems/todo', function(req, res, next) {
+  shibsession = req.cookies["_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f"]
+  userModel.find({ "_shibsession_68747470733a2f2f73712e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f68747470733a2f2f73702e6c6f67696e2e75666c2e6564752f75726e3a6564753a75666c3a70726f643a30303734312f": shibsession })
+  .then((users) => {
+    res.setHeader('Content-Type', 'application/json');
+    if(users.length != 0) 
+    {
+      if(!(users[0].res_todo == undefined))
+      {
+        res.send(users[0].res_todo)
+      }else{
+        res.send({"error": "Todo data not found."})
+      }
     }else
     {
       res.send({"error": "User not found."})

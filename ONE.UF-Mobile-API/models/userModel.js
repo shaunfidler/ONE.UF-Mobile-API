@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema({
   "res_getgrades": {
     type: String
   },
-  "res_getaccountactivites": {
+  "res_getaccountactivities": {
     type: String
   },
   "res_chargesdue": {
@@ -31,6 +31,12 @@ const userSchema = new mongoose.Schema({
     type: Number
   },
   "res_myschedule_2221": {
+    type: String
+  },
+  "res_getholds": {
+    type: String
+  },
+  "res_todo": {
     type: String
   }
 });
