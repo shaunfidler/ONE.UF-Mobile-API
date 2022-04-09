@@ -167,7 +167,7 @@ router.get('/campusfinances/getaccountbalance', function(req, res, next) {
     if(users.length != 0) 
     {
       if(!(users[0].res_getaccountbalance == undefined))
-      {
+      {     
         res.send({ "accountBalance": users[0].res_getaccountbalance });
       }else{
         res.send({"error": "Account balance not found."});
